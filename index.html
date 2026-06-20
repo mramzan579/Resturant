@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Premium Dining & Culinary Experience</title>
+    <meta name="description" content="Experience premium dining at Aura. Reserve a table, order via WhatsApp, or join our loyalty program.">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="Aura | Premium Dining">
+    <meta property="og:description" content="Experience premium dining at Aura. Reserve a table, order via WhatsApp, or join our loyalty program.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts: Playfair Display for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Restaurant & FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Aura",
+      "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80",
+      "servesCuisine": "International",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Culinary Boulevard",
+        "addressLocality": "Metropolis",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "telephone": "+1234567890",
+      "priceRange": "$$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- 1. Global Conversion System -->
+    <!-- Sticky Top Offer Bar -->
+    <div class="top-offer-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span class="status-widget"><i class="fa-solid fa-clock"></i> <span id="opening-status">Open Now (Closes at 11 PM)</span></span>
+                <span class="occupancy-indicator"><span class="pulse-dot"></span> Live: <strong class="gold-text">80% Full</strong> - Walk-ins welcome</span>
+            </div>
+            <div class="top-bar-center">
+                <span class="offer-text"><i class="fa-solid fa-star"></i> Limited Time: 20% Off Weekend Reservations <i class="fa-solid fa-star"></i></span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#reservation" class="top-bar-btn" onclick="openReservationModal(event)">Reserve Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="#">AURA<span>.</span></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#specials">Specials</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions desktop-only">
+                <a href="https://wa.me/1234567890" class="btn btn-outline" target="_blank"><i class="fa-brands fa-whatsapp"></i> Order WhatsApp</a>
+                <a href="#reservation" class="btn btn-primary" onclick="openReservationModal(event)">Reserve Table</a>
+            </div>
+            <button class="mobile-menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Floating Elements -->
+    <div class="floating-actions">
+        <a href="https://wa.me/1234567890" class="float-btn whatsapp" aria-label="WhatsApp Order" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+1234567890" class="float-btn call" aria-label="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <div class="floating-review">
+        <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <div class="review-text">"Best fine dining in the city!"</div>
+        <div class="review-author">- Google Reviews (4.9/5)</div>
+    </div>
+
+    <!-- Mobile Bottom CTA Bar -->
+    <div class="mobile-bottom-bar">
+        <a href="tel:+1234567890" class="mobile-btn"><i class="fa-solid fa-phone"></i> Call</a>
+        <a href="https://wa.me/1234567890" class="mobile-btn whatsapp-bg" target="_blank"><i class="fa-brands fa-whatsapp"></i> Order</a>
+        <a href="#reservation" class="mobile-btn primary-bg" onclick="openReservationModal(event)"><i class="fa-solid fa-calendar-check"></i> Reserve</a>
+    </div>
+
+    <!-- 2. Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80" alt="Premium Dining">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">An Unforgettable Culinary Experience</h1>
+            <p class="hero-subtitle">Taste the perfection of globally inspired cuisine in an atmosphere of pure luxury.</p>
+            <div class="hero-ctas">
+                <button class="btn btn-primary btn-large" onclick="openReservationModal(event)">Reserve Your Table</button>
+                <a href="#menu" class="btn btn-outline btn-large">View Digital Menu</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <i class="fa-solid fa-star gold-text"></i>
+                    <span>4.9/5 (2,000+ Reviews)</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-award gold-text"></i>
+                    <span>Award Winning Chef</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-calendar-alt gold-text"></i>
+                    <span>Est. 2010</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Social Proof Bar -->
+    <section class="social-proof-bar">
+        <div class="container social-proof-inner">
+            <div class="stat-item">
+                <h3 class="stat-number">15,000+</h3>
+                <p class="stat-label">Happy Customers</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">4.9/5</h3>
+                <p class="stat-label">Positive Reviews</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">250,000+</h3>
+                <p class="stat-label">Tables Served</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">14</h3>
+                <p class="stat-label">Years Operating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef's Special Today -->
+    <section class="chefs-special section-padding" id="specials">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Today's Highlight</span>
+                <h2>Chef's Special Today</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="special-card">
+                <div class="special-img">
+                    <img src="https://images.unsplash.com/photo-1544025162-83b38c2278e1?auto=format&fit=crop&w=800&q=80" alt="Wagyu Ribeye">
+                    <div class="special-badge">Only 10 Portions Left</div>
+                </div>
+                <div class="special-content">
+                    <h3>Signature Wagyu Ribeye</h3>
+                    <p>A5 grade Wagyu, truffle mashed potatoes, grilled asparagus, and red wine reduction.</p>
+                    <div class="price">$120</div>
+                    <button class="btn btn-primary" onclick="openReservationModal(event)">Reserve Now to Guarantee</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Deals / Special Offers -->
+    <section class="combo-deals section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Exclusive Deals</span>
+                <h2>Special Offers & Combos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="deal-card">
+                    <div class="deal-header">Family Deal</div>
+                    <h3>The Grand Feast</h3>
+                    <p>2 Starters, 4 Mains, 2 Desserts, and a pitcher of artisan mocktail.</p>
+                    <div class="deal-price"><span class="old-price">$180</span> <span class="new-price">$140</span></div>
+                    <button class="btn btn-outline full-width">Claim Offer</button>
+                </div>
+                <div class="deal-card highlight">
+                    <div class="deal-header">Weekend Buffet</div>
+                    <h3>Sunday Brunch</h3>
+                    <p>Unlimited access to our premium international buffet spread.</p>
+                    <div class="deal-price"><span class="new-price">$45/person</span></div>
+                    <button class="btn btn-primary full-width">Book Table</button>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-header">Corporate</div>
+                    <h3>Executive Lunch</h3>
+                    <p>3-course meal served within 45 minutes for busy professionals.</p>
+                    <div class="deal-price"><span class="new-price">$35/person</span></div>
+                    <button class="btn btn-outline full-width">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Dishes -->
+    <section class="featured-dishes section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Culinary Masterpieces</span>
+                <h2>Featured Dishes</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Truffle Pasta">
+                        <span class="badge popular">Popular</span>
+                    </div>
+                    <div class="dish-info">
+                        <h3>Black Truffle Linguine</h3>
+                        <p class="dish-desc">Handmade pasta tossed in a creamy wild mushroom and black truffle sauce.</p>
+                        <div class="dish-footer">
+                            <span class="dish-price">$32</span>
+                            <button class="add-to-order-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="Salmon">
+                        <span class="badge chef">Chef's Rec</span>
+                    </div>
+                    <div class="dish-info">
+                        <h3>Pan-Seared Salmon</h3>
+                        <p class="dish-desc">Norwegian salmon with lemon butter sauce, served on a bed of quinoa.</p>
+                        <div class="dish-footer">
+                            <span class="dish-price">$38</span>
+                            <button class="add-to-order-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Pizza">
+                        <span class="badge new">New</span>
+                    </div>
+                    <div class="dish-info">
+                        <h3>Wood-Fired Margherita</h3>
+                        <p class="dish-desc">San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil.</p>
+                        <div class="dish-footer">
+                            <span class="dish-price">$24</span>
+                            <button class="add-to-order-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Digital Menu System -->
+    <section class="digital-menu section-padding bg-darker" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Explore</span>
+                <h2>Interactive Digital Menu</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="menu-controls">
+                <div class="search-wrap">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="menu-search" placeholder="Search for dishes, ingredients...">
+                </div>
+                <div class="menu-tabs">
+                    <button class="tab-btn active" data-category="all">All</button>
+                    <button class="tab-btn" data-category="starters">Starters</button>
+                    <button class="tab-btn" data-category="main">Main Course</button>
+                    <button class="tab-btn" data-category="bbq">BBQ</button>
+                    <button class="tab-btn" data-category="pizza">Pizza</button>
+                    <button class="tab-btn" data-category="burgers">Burgers</button>
+                    <button class="tab-btn" data-category="desserts">Desserts</button>
+                    <button class="tab-btn" data-category="drinks">Drinks</button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <!-- Menu items generated via JS -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline">Download Full Menu (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Ordering Funnel Section -->
+    <section class="whatsapp-funnel section-padding">
+        <div class="container">
+            <div class="funnel-wrapper">
+                <div class="funnel-content">
+                    <span class="sub-heading gold-text">Fast & Easy</span>
+                    <h2>Order Directly via WhatsApp</h2>
+                    <p>Skip the apps. Order directly from our kitchen to your door in 3 simple steps.</p>
+                    <ul class="funnel-steps">
+                        <li><i class="fa-solid fa-check-circle gold-text"></i> Browse our digital menu above</li>
+                        <li><i class="fa-solid fa-check-circle gold-text"></i> Click the WhatsApp button</li>
+                        <li><i class="fa-solid fa-check-circle gold-text"></i> Send your order & enjoy!</li>
+                    </ul>
+                    <a href="https://wa.me/1234567890" class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Start WhatsApp Order</a>
+                </div>
+                <div class="funnel-image">
+                    <img src="https://images.unsplash.com/photo-1590492809635-430c776fb1ea?auto=format&fit=crop&w=800&q=80" alt="WhatsApp Ordering">
+                    <div class="floating-alert">
+                        <i class="fa-solid fa-motorcycle"></i> Average Delivery: 35 Mins
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Coverage Section -->
+    <section class="delivery-coverage section-padding bg-darker">
+        <div class="container text-center">
+            <span class="sub-heading">We Deliver To You</span>
+            <h2>Delivery Coverage Area</h2>
+            <div class="divider"></div>
+            <p class="max-width-text">We ensure your food arrives hot and fresh. We currently cover a 10-mile radius from our central kitchen.</p>
+            <div class="coverage-map-placeholder">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <p>Interactive Map Widget<br><small>(Google Maps Integration)</small></p>
+                <div class="zones">
+                    <span class="zone"><span class="dot green"></span> Zone A: Free Delivery</span>
+                    <span class="zone"><span class="dot yellow"></span> Zone B: $5 Fee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">The Aura Difference</span>
+                <h2>Why Dine With Us</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Farm-to-table sourcing ensures the highest quality and taste.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                    <h3>Certified Hygiene</h3>
+                    <p>Grade A cleanliness and strict food safety protocols.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Fast Service</h3>
+                    <p>Optimized kitchen workflows for minimal waiting times.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Family Friendly</h3>
+                    <p>Dedicated kids menu and a comfortable environment for all ages.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-hat-cowboy"></i></div>
+                    <h3>Premium Chefs</h3>
+                    <p>Culinary masters with international experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-couch"></i></div>
+                    <h3>Comfortable Environment</h3>
+                    <p>Luxury seating, ambient lighting, and perfect acoustics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Experience Timeline -->
+    <section class="live-experience section-padding bg-darker" id="experience">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">The Journey</span>
+                <h2>Your Experience at Aura</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="timeline-content">
+                        <h3>1. Reserve Table</h3>
+                        <p>Book online seamlessly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-door-open"></i></div>
+                    <div class="timeline-content">
+                        <h3>2. Arrive & Relax</h3>
+                        <p>VIP welcome and seating.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="timeline-content">
+                        <h3>3. Enjoy Food</h3>
+                        <p>A culinary journey awaits.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-gift"></i></div>
+                    <div class="timeline-content">
+                        <h3>4. Earn Rewards</h3>
+                        <p>Collect loyalty points instantly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fa-solid fa-rotate-right"></i></div>
+                    <div class="timeline-content">
+                        <h3>5. Return Again</h3>
+                        <p>Unlock exclusive VIP benefits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyalty Program Section -->
+    <section class="loyalty-program section-padding">
+        <div class="container">
+            <div class="loyalty-box">
+                <div class="loyalty-text">
+                    <h2>Aura Rewards Program</h2>
+                    <p>Earn points with every bite. Your loyalty deserves to be rewarded.</p>
+                    <ul class="rewards-list">
+                        <li><i class="fa-solid fa-star"></i> <strong>Visit 5 Times:</strong> Get a Free Signature Meal</li>
+                        <li><i class="fa-solid fa-crown"></i> <strong>Visit 10 Times:</strong> Unlock VIP Benefits & Priority Seating</li>
+                    </ul>
+                    <button class="btn btn-primary">Join for Free Today</button>
+                </div>
+                <div class="loyalty-card-visual">
+                    <div class="card-glass">
+                        <div class="card-logo">AURA<span>.</span></div>
+                        <div class="card-type">VIP BLACK CARD</div>
+                        <div class="card-chip"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="card-name">MEMBER</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Booking Section -->
+    <section class="event-booking section-padding bg-darker" id="events">
+        <div class="container">
+            <div class="grid-2 align-center">
+                <div class="event-images">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Events" class="main-img">
+                </div>
+                <div class="event-text">
+                    <span class="sub-heading">Celebrate With Us</span>
+                    <h2>Host Your Unforgettable Events</h2>
+                    <p>From intimate gatherings to grand celebrations, our dedicated events team ensures perfection.</p>
+                    <ul class="event-types">
+                        <li><i class="fa-solid fa-cake-candles"></i> Birthday Parties</li>
+                        <li><i class="fa-solid fa-users"></i> Family Gatherings</li>
+                        <li><i class="fa-solid fa-handshake"></i> Business Meetings</li>
+                        <li><i class="fa-solid fa-building"></i> Corporate Events</li>
+                        <li><i class="fa-solid fa-ring"></i> Engagement Dinners</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openReservationModal(event)">Inquire About Event Booking</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef Showcase -->
+    <section class="chef-showcase section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">The Masters</span>
+                <h2>Meet Our Chefs</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="chef-card">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Chef">
+                    <div class="chef-info">
+                        <h3>Alessandro Rossi</h3>
+                        <p class="chef-role">Executive Chef</p>
+                        <div class="chef-badges">
+                            <span class="badge">15 Yrs Exp.</span>
+                            <span class="badge">Michelin Star</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- More chefs can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Testimonials Slider -->
+    <section class="testimonials section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Word of Mouth</span>
+                <h2>What Our Guests Say</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonial-slider" id="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="quote">"Absolutely the best dining experience we've had in years. The atmosphere is luxurious and the food is phenomenal."</p>
+                    <p class="author">- Sarah & James (Family Dinner)</p>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="quote">"We hosted our corporate lunch here and the service was impeccable. Highly recommended for business meetings."</p>
+                    <p class="author">- Michael T. (Corporate Client)</p>
+                </div>
+            </div>
+            <div class="slider-controls text-center">
+                <button class="slider-btn prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Got Questions?</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">Do I need a reservation? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>While walk-ins are welcome, we highly recommend making a reservation, especially for dinner and weekends.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer delivery? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Yes, we offer direct delivery via WhatsApp ordering within a 10-mile radius.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is there a dress code? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Our dress code is smart casual. We want you to be comfortable while maintaining a premium dining atmosphere.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Location -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AURA<span>.</span></h3>
+                    <p>Premium dining experience blending luxury, comfort, and extraordinary culinary artistry.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Location</h3>
+                    <p><i class="fa-solid fa-location-dot gold-text"></i> 123 Culinary Blvd, Metropolis, NY 10001</p>
+                    <div class="map-container mt-2">
+                        <div class="map-placeholder">Google Maps Embed Placeholder</div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Mon - Thu:</span> <span>11:00 AM - 10:00 PM</span></li>
+                        <li><span>Fri - Sat:</span> <span>11:00 AM - 11:30 PM</span></li>
+                        <li><span>Sunday:</span> <span>10:00 AM - 9:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Aura Restaurant. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div class="modal-overlay" id="reservation-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeReservationModal()"><i class="fa-solid fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Reserve Your Table</h2>
+                <p>Select your preferred date and time</p>
+            </div>
+            
+            <form id="reservation-form" class="reservation-form">
+                <div class="calendar-ui-placeholder mb-3">
+                    <div class="calendar-header">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>June 2026</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="calendar-days">
+                        <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                        <!-- Mock dates -->
+                        <span>...</span><span class="active">20</span><span>21</span><span>22</span>
+                    </div>
+                    <div class="time-slots mt-2">
+                        <span class="slot">18:00</span>
+                        <span class="slot active">19:30</span>
+                        <span class="slot">20:00</span>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="res-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="res-phone" required placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="res-email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Guests</label>
+                        <select id="res-guests" required>
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5+">5+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="res-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" id="res-time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary full-width mt-3">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="modal-overlay" id="success-popup">
+        <div class="modal-content text-center success-content">
+            <i class="fa-solid fa-check-circle success-icon"></i>
+            <h2>Reservation Requested</h2>
+            <p class="success-msg">This is a demo version. In the customized production version, reservation requests will be processed automatically.</p>
+            <button class="btn btn-primary mt-3" onclick="closeSuccessPopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="modal-overlay" id="exit-popup">
+        <div class="modal-content exit-content text-center">
+            <button class="close-modal" onclick="closeExitPopup()"><i class="fa-solid fa-times"></i></button>
+            <span class="sub-heading gold-text">Wait! Don't leave hungry.</span>
+            <h2>Get 10% Off Your First Reservation</h2>
+            <p>Claim your exclusive discount before you go.</p>
+            <button class="btn btn-primary mt-3" onclick="claimExitOffer()">Claim 10% Off Now</button>
+        </div>
+    </div>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

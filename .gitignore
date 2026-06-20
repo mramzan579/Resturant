@@ -1,21 +1,9 @@
-# Node modules (if any added later)
-node_modules/
-
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# Private Portfolio & Internal Business Documents
-# ---------------------------------------------------
-# To keep internal business strategy, sales pitches, and workflow documentation
-# private from clients or public repository viewers, uncomment the lines below 
-# before pushing to a public repository. If this repository is private, you can 
-# leave them commented out to back them up securely.
-#
-# assets/selling-points.md
-# assets/outreach-material.md
-# assets/github-workflow.md
-# assets/portfolio-roadmap.md
+# Internal Business Documents (Agency Strategy, Outreach, Workflows)
+private/
 
-# Deployment zips
+# Deployment packages
 deployment/*.zip

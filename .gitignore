@@ -12,10 +12,10 @@ Thumbs.db
 # before pushing to a public repository. If this repository is private, you can 
 # leave them commented out to back them up securely.
 #
-assets/selling-points.md
-assets/outreach-material.md
-assets/github-workflow.md
-assets/portfolio-roadmap.md
+# assets/selling-points.md
+# assets/outreach-material.md
+# assets/github-workflow.md
+# assets/portfolio-roadmap.md
 
 # Deployment zips
 deployment/*.zip
